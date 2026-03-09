@@ -53,7 +53,7 @@ body {
   width: 50%;
   height: 120vh;
 
-  background-image: url("heart.png");
+  background-image: url("./assets/heart.png");
   background-size: 200% 100%;
   background-repeat: no-repeat;
 
