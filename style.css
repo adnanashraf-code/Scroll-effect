@@ -1,0 +1,219 @@
+/* RESET */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  overflow-x: hidden;
+  font-family: Arial, Helvetica, sans-serif;
+  background: linear-gradient(to right bottom, black, red);
+}
+
+/* MAIN */
+
+#main {
+  color: #fff;
+  font-family: monospace;
+  background: linear-gradient(to right bottom, black, red);
+}
+
+/* HERO SECTION */
+
+.hero {
+  position: relative;
+  height: 300vh;
+}
+
+/* HERO IMAGE */
+
+.scene {
+  position: sticky;
+  top: 0;
+
+  width: 100%;
+  height: 120vh;
+
+  object-fit: contain;
+
+  transform: scale(3);
+  transition: transform 0.15s linear;
+  will-change: transform;
+  z-index: 1;
+}
+
+/* HEART CURTAINS */
+
+.curtain {
+  position: fixed;
+  top: 0;
+
+  width: 50%;
+  height: 120vh;
+
+  background-image: url("heart.png");
+  background-size: 200% 100%;
+  background-repeat: no-repeat;
+
+  z-index: 3;
+
+  transition: transform 0.2s linear;
+}
+
+.left {
+  left: 0;
+  background-position: left;
+}
+
+.right {
+  right: 0;
+  background-position: right;
+}
+
+/* TITLE */
+
+.title {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+
+  transform: translate(-50%, -50%);
+
+  font-size: 60px;
+  font-family: Helvetica, sans-serif;
+
+  z-index: 4;
+
+  background: linear-gradient(
+    135deg,
+    #7a0000 0%,
+    #b30000 25%,
+    #ff0000 50%,
+    #135dc4 75%,
+    #000000 100%
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  transition: transform 0.2s linear;
+}
+
+/* CONTENT SECTION */
+
+.content {
+  position: relative;
+
+  padding: 120px 20%;
+
+  min-height: 100vh;
+  line-height: 1.8;
+
+  background: linear-gradient(to right bottom, red, black);
+}
+
+/* CONTENT TEXT */
+
+.content h2 {
+  font-size: 60px;
+  font-family: Helvetica, sans-serif;
+  margin-bottom: 20px;
+}
+
+.content p {
+  font-size: 2rem;
+  font-family: sans-serif;
+  margin-bottom: 20px;
+  color: whitesmoke;
+}
+/* ============================= */
+/* TABLET RESPONSIVE */
+/* ============================= */
+
+@media (max-width: 1024px) {
+  .title {
+    font-size: 48px;
+  }
+
+  .scene {
+    height: 100vh;
+  }
+
+  .content {
+    padding: 100px 10%;
+  }
+
+  .content h2 {
+    font-size: 48px;
+  }
+
+  .content p {
+    font-size: 1.6rem;
+  }
+}
+
+/* ============================= */
+/* MOBILE RESPONSIVE */
+/* ============================= */
+
+@media (max-width: 768px) {
+  .hero {
+    height: 260vh;
+  }
+
+  .title {
+    font-size: 36px;
+    text-align: center;
+    padding: 0 20px;
+  }
+
+  .scene {
+    height: 90vh;
+    transform: scale(2.2);
+  }
+
+  .curtain {
+    height: 100vh;
+  }
+
+  .content {
+    padding: 80px 8%;
+  }
+
+  .content h2 {
+    font-size: 36px;
+  }
+
+  .content p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+  }
+}
+
+/* ============================= */
+/* SMALL MOBILE */
+/* ============================= */
+
+@media (max-width: 480px) {
+  .title {
+    font-size: 28px;
+  }
+
+  .scene {
+    transform: scale(2);
+  }
+
+  .content {
+    padding: 60px 6%;
+  }
+
+  .content h2 {
+    font-size: 28px;
+  }
+
+  .content p {
+    font-size: 1rem;
+  }
+}
